@@ -1,33 +1,34 @@
 import React from "react";
+import useReveal from "../hooks/useReveal";
 
 const Contact: React.FC = () => {
+  useReveal();
+
   return (
     <div
       id="contact"
-      className="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-b from-gray-900 to-gray-800 text-white px-4"
+      className="flex font-sans min-h-screen justify-center gap-20 ps-20 items-center text-center bg-gray-900 text-white"
     >
-      <h1 className="text-4xl md:text-6xl font-bold mb-4">
-        Hi, I’m <span className="text-green-400">Arya Panca Wibowo</span>
-      </h1>
-      <p className="text-lg md:text-xl max-w-2xl mb-6">
-        A passionate <span className="text-green-300">Frontend Developer</span>{" "}
-        and <span className="text-green-300">Machine Learning Enthusiast</span>{" "}
-        with experience building interactive web applications, mobile AR
-        projects, and AI-powered solutions.
-      </p>
-      <div className="flex gap-4">
-        <a
-          href="#projects"
-          className="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-lg font-medium transition-colors"
-        >
-          View My Work
-        </a>
-        <a
-          href="#contact"
-          className="px-6 py-3 border border-green-500 hover:bg-green-500 rounded-lg font-medium transition-colors"
-        >
-          Contact Me
-        </a>
+      <div className="flex justify-center reveal delay-1">
+        <img src="contact.png" alt="contact" className="w-105" />
+      </div>
+
+      <div className="w-[50%] flex flex-col gap-4">
+        <div className="flex text-[38px] font-bold text-left justify-between items-center reveal delay-2">
+          <div>Contact Details</div>
+          <div className="border-b-2 border-[#4caf50] w-[50%]" />
+        </div>
+
+        <div className="flex flex-col gap-2 text-[15px] reveal delay-3">
+          <div className="flex gap-2 text-justify">
+            <span className="text-[#66bb6a] min-w-[70px]">Phone:</span>
+            <span>+62 878 8217 6442</span>
+          </div>
+          <div className="flex gap-2 text-justify">
+            <span className="text-[#66bb6a] min-w-[70px]">Email:</span>
+            <span>aryapancawibowo56@gmail.com</span>
+          </div>
+        </div>
       </div>
     </div>
   );

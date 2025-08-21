@@ -1,33 +1,33 @@
 import React from "react";
+import useReveal from "../hooks/useReveal";
 
 const Close: React.FC = () => {
+  useReveal();
+
   return (
     <div
       id="close"
-      className="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-b from-gray-900 to-gray-800 text-white px-4"
+      className="relative font-sans min-h-screen flex items-center text-center bg-gray-900 text-white"
     >
-      <h1 className="text-4xl md:text-6xl font-bold mb-4">
-        Hi, I’m <span className="text-green-400">Arya Panca Wibowo</span>
-      </h1>
-      <p className="text-lg md:text-xl max-w-2xl mb-6">
-        A passionate <span className="text-green-300">Frontend Developer</span>{" "}
-        and <span className="text-green-300">Machine Learning Enthusiast</span>{" "}
-        with experience building interactive web applications, mobile AR
-        projects, and AI-powered solutions.
-      </p>
-      <div className="flex gap-4">
-        <a
-          href="#projects"
-          className="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-lg font-medium transition-colors"
-        >
-          View My Work
-        </a>
-        <a
-          href="#contact"
-          className="px-6 py-3 border border-green-500 hover:bg-green-500 rounded-lg font-medium transition-colors"
-        >
-          Contact Me
-        </a>
+      <img src="end.png" alt="end" className="w-113 reveal delay-1" />
+
+      <div className="ml-auto w-[60%] flex flex-col gap-4 pr-10">
+        <div className="flex text-[85px] h-[70px] text-left justify-between items-center reveal delay-2">
+          <div>THANK YOU</div>
+          <div className="border-b-2 border-[#4caf50] w-[35%]" />
+        </div>
+        <div className="text-[15px] text-justify w-[60%] reveal delay-3">
+          I’m always open to new opportunities, collaborations, and challenges.
+          Let’s create something great together!
+        </div>
+        <div className="flex gap-4 text-center reveal delay-4">
+          <a
+            className="bg-[#4caf50] hover:bg-green-600 p-1 px-15"
+            href="#contact"
+          >
+            Contact Me!
+          </a>
+        </div>
       </div>
     </div>
   );
